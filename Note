@@ -11,4 +11,22 @@ We should use classification for that and use something like KNN
       Ensemble learning combines multiple models to obtain a robust model and has been prominently used with data augmentation methods to address class imbalance problems.
 * Missing data is so important
 
+import pandas as ps
+cancer = pd.read_csv('...')
+cancer['column'].unique()
+cancer.info()
+
+for rename : 
+cancer["diagnosis"] = cancer["diagnosis"].replace({
+    "M" : "Malignant",
+    "B" : "Benign"
+})
+
+for calculate percentage : 100 * cancer.groupby("diagnosis").size() / cancer.shape[0]
+
+cancer["diagnosis"].value_counts()
+
+cancer["diagnosis"].value_counts(normalize=True)
+
+
 
